@@ -3,6 +3,7 @@ import { Sidebar } from '../components/SideBar/SideBar';
 import { Topbar } from '../components/topbar/Topbar';
 import { ShowBanca } from '../components/Content/Banca/Banca';
 import { Home} from '../components/Content/Home/index';
+import { Charts } from '../components/Content/Charts/Charts';
 
 const Dashboard = () => {
   const [activeOption, setActiveOption] = useState('home');
@@ -14,13 +15,14 @@ const Dashboard = () => {
   const renderContent = () => {
     switch (activeOption) {
       case 'home': 
-        return <Home/>
+        // return <Home/>;]
+        return <Home/>;
       case 'dashboard':
-        return <h1>dashboard</h1>
+        return <Charts/>;
       case 'list':
         return <h1>List</h1>;
       case 'myBoards':
-        return <ShowBanca />
+        return <ShowBanca />;
       case 'profile':
         return <h1>Profile</h1>;
       default:
@@ -45,4 +47,5 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+
+export default Dashboard
