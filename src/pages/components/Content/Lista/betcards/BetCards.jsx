@@ -80,15 +80,48 @@ function BetDashboard() {
       exit: null,
       profit: -30,
       odd: 1.60
-    }
+    },
+    {
+      iconUrl: "/pendente.svg",
+      date: "24 Jan 2023 - 18:30",
+      betName: "Bet 365",
+      status: "Pendente",
+      entry: 50,
+      exit: null,
+      profit: -30,
+      odd: 1.60
+    },
+    {
+      iconUrl: "/pendente.svg",
+      date: "24 Jan 2023 - 18:30",
+      betName: "Bet 365",
+      status: "Pendente",
+      entry: 50,
+      exit: null,
+      profit: -30,
+      odd: 1.60
+    },
+    {
+      iconUrl: "/pendente.svg",
+      date: "24 Jan 2023 - 18:30",
+      betName: "Bet 365",
+      status: "Pendente",
+      entry: 50,
+      exit: null,
+      profit: -30,
+      odd: 1.60
+    },
+    
   ];
 
   return (
     <main className="px-5 mt-12 w-full max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col">
+        <div className="grid grid-cols-2 gap-5">
         {bets.map((bet, index) => (
           <SportEventCard key={index} {...bet} />
         ))}
+        </div>
       </div>
     </main>
   );
