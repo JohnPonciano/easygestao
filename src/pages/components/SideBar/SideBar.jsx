@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, List, BarChart2, User, LogOut } from 'lucide-react';
+import { Home, List, BarChart2, User, LogOut, LineChart } from 'lucide-react';
 
 
 export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
@@ -25,8 +25,22 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
                   onClick={() => onOptionChange('home')}
                 >
                   <Home className="mr-2 text-white" size={20} />
-                  <p className="flex-1 text-sm font-medium tracking-wide leading-tight text-white">Dashboard</p>
+                  <p className="flex-1 text-sm font-medium tracking-wide leading-tight text-white">Home</p>
                 </a>
+
+                <a
+                  href="#"
+                  className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
+                    activeOption === 'dashboard' ? 'bg-green-400 bg-opacity-10' : ''
+                  }`}
+                  onClick={() => onOptionChange('dashboard')}
+                >
+                  <LineChart className="mr-2 text-white" size={20} />
+                  <p className="flex-1 text-sm font-medium tracking-wide leading-tight
+                   text-white">Dashboard</p>
+                </a>
+
+                
                 <a
                   href="#"
                   className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${

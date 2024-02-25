@@ -15,6 +15,8 @@ const Dashboard = () => {
     switch (activeOption) {
       case 'home': 
         return <Home/>
+      case 'dashboard':
+        return <h1>dashboard</h1>
       case 'list':
         return <h1>List</h1>;
       case 'myBoards':
