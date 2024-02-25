@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Sidebar } from '../components/SideBar/SideBar';
 import { Topbar } from '../components/topbar/Topbar';
 import { ShowBanca } from '../components/Content/Banca/Banca';
+import { Home} from '../components/Content/Home/index';
 
 const Dashboard = () => {
   const [activeOption, setActiveOption] = useState('home');
@@ -12,12 +13,12 @@ const Dashboard = () => {
 
   const renderContent = () => {
     switch (activeOption) {
-      case 'home':
-        return <ShowBanca />;
+      case 'home': 
+        return <Home/>
       case 'list':
         return <h1>List</h1>;
       case 'myBoards':
-        return <h1>List</h1>;
+        return <ShowBanca />
       case 'profile':
         return <h1>Profile</h1>;
       default:
