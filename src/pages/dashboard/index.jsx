@@ -4,6 +4,7 @@ import { Topbar } from '../components/topbar/Topbar';
 import { ShowBanca } from '../components/Content/Banca/Banca';
 import { Home} from '../components/Content/Home/index';
 import { Charts } from '../components/Content/Charts/Charts';
+import { ListaBet } from '../components/Content/Lista';
 
 const Dashboard = () => {
   const [activeOption, setActiveOption] = useState('home');
@@ -20,7 +21,7 @@ const Dashboard = () => {
       case 'dashboard':
         return <Charts/>;
       case 'list':
-        return <h1>List</h1>;
+        return <ListaBet/>
       case 'myBoards':
         return <ShowBanca />;
       case 'profile':
