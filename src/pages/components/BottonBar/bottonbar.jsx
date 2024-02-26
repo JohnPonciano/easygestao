@@ -1,8 +1,10 @@
 // NavOption.js
+import Link from 'next/link';
 import React from 'react';
 
 const NavOption = ({ id, icon, label, active, onOptionChange }) => (
-  <a
+  <Link
+  href={'#'}
     id={id}
     className={`hover:bg-green-400 hover:bg-opacity-10 rounded-full 
       inline-flex items-center justify-center p-2 ${
@@ -12,7 +14,7 @@ const NavOption = ({ id, icon, label, active, onOptionChange }) => (
   >
     {icon}
     <p className="text-sm font-medium tracking-wide leading-tight text-white">{label}</p>
-  </a>
+  </Link>
 );
 
 
