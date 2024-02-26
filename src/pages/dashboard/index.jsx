@@ -16,7 +16,6 @@ const Dashboard = () => {
   const renderContent = () => {
     switch (activeOption) {
       case 'home': 
-        // return <Home/>;]
         return <Home onOptionChange={handleOptionChange} />;
       case 'dashboard':
         return <Charts/>;
