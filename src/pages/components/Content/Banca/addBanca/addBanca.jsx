@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DollarSign } from 'lucide-react';
 
 
-export const EditBankrollForm = ({onBackToCards}) => {
+export const AddBankrollForm = ({onBackToCards}) => {
 
   const [formData, setFormData] = useState({
     bankrollName: '',
@@ -24,16 +24,15 @@ export const EditBankrollForm = ({onBackToCards}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // Adicione lógica para lidar com os dados do formulário conforme necessário
     onBackToCards();
   };
 
   return (
     
     <div className="container mx-auto mt-1 p-8 bg-gray-700 rounded-lg">
-      <div className="flex items-center justify-start mb-8 " style={{ width: '100%' }}>
+      <div className="flex items-center justify-start mb-8  w-full ">
         <DollarSign className="mr-2 text-white" size={35} />
-        <h3 className=" font-semibold text-white ml-2 text-4xl ">Editar banca </h3>
+        <h3 className=" font-semibold text-white ml-2 text-4xl ">Adicionar Banca</h3>
       </div>
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
         {/* Coluna 1 */}

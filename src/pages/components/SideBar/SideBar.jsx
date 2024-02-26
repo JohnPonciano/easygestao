@@ -18,8 +18,9 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
             <div className="w-full">
               <div className="flex flex-col space-y-6 items-center justify-start w-full">
                 <a
-                  href="#"
-                  className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
+                  id="home"
+                  className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full
+                   border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
                     activeOption === 'home' ? 'bg-green-400 bg-opacity-10' : ''
                   }`}
                   onClick={() => onOptionChange('home')}
@@ -29,8 +30,9 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
                 </a>
 
                 <a
-                  href="#"
-                  className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
+                  id="dashboard"
+                  className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full
+                   border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
                     activeOption === 'dashboard' ? 'bg-green-400 bg-opacity-10' : ''
                   }`}
                   onClick={() => onOptionChange('dashboard')}
@@ -40,9 +42,8 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
                    text-white">Dashboard</p>
                 </a>
 
-                
                 <a
-                  href="#"
+                  id="list"
                   className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
                     activeOption === 'list' ? 'bg-green-400 bg-opacity-10' : ''
                   }`}
@@ -51,8 +52,9 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
                   <List className="mr-2 text-white" size={20} />
                   <p className="flex-1 text-sm font-medium tracking-wide leading-tight text-white">Lista</p>
                 </a>
+
                 <a
-                  href="#"
+                  id="myBoards"
                   className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
                     activeOption === 'myBoards' ? 'bg-green-400 bg-opacity-10' : ''
                   }`}
@@ -61,8 +63,9 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
                   <BarChart2 className="mr-2 text-white" size={20} />
                   <p className="flex-1 text-sm font-medium tracking-wide leading-tight text-white">Minha Banca</p>
                 </a>
+                
                 <a
-                  href="#"
+                  id="perfil"
                   className={`hover:bg-green-400 hover:bg-opacity-10 border rounded-full border-green-400 inline-flex space-x-2 items-center justify-start w-full p-3 ${
                     activeOption === 'profile' ? 'bg-green-400 bg-opacity-10' : ''
                   }`}
@@ -76,7 +79,7 @@ export const Sidebar = ({ onOptionChange, activeOption, ...props }) => {
           </div>
         </div>
       </div>
-      <a href='#' className="inline-flex space-x-2 mt-1 items-center justify-start w-full p-3 rounded-lg">
+      <a href='/' className="inline-flex space-x-2 mt-1 items-center justify-start w-full p-3 rounded-lg">
         <div className="flex items-center justify-center w-10 h-full p-2 rounded-full">
           <LogOut className="mr-2 text-red-400" size={20} />
         </div>

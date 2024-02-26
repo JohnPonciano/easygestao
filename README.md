@@ -29,7 +29,6 @@ Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devid
 # To-Do
 - [ ]  Responsivade - 20% - Estou fazendo componentes responsiveis, mas topbar e a sidebar precisam ser configuradas para sumirem e serem substituida pelo botton-bar
 - [ ] Dashboard - 10% - Estou aprendo a usar Charts
-- [ ] Adicionar Banca 
 - [ ] Adicionar Entrada
 - [ ] Ajustes de cores e bordas
 
@@ -38,6 +37,7 @@ Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devid
 - [x] Cadastro
 - [x] Pagina Inicial
 - [x] Minhas Bancas
+- [x] Adicionar Banca
 - [x] Editar Banca
 - [x] Status das Apostas - 90% - Falta implementar calendário e filtro.
 

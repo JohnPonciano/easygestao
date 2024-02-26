@@ -17,7 +17,7 @@ const Dashboard = () => {
     switch (activeOption) {
       case 'home': 
         // return <Home/>;]
-        return <Home/>;
+        return <Home onOptionChange={handleOptionChange} />;
       case 'dashboard':
         return <Charts/>;
       case 'list':
