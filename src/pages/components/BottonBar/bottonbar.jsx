@@ -52,7 +52,7 @@ const BottonBar = ({ onIconClick, activeOption }) => {
       )
     },
     {
-      id: 'dashboards',
+      id: 'dashboard',
       icon: (
         <img
           loading="lazy"
