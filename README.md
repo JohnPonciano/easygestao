@@ -27,10 +27,11 @@ Para instalar corretamente
 Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devido ao foco em aprender a criar os componentes, não desenvolvi o metodo de auth para redirecionar a dashboard diretamente. 
 
 # To-Do
-- [ ]  Responsivade - 20% - Estou fazendo componentes responsiveis, mas topbar e a sidebar precisam ser configuradas para sumirem e serem substituida pelo botton-bar
+- [ ] Responsivade - 30% - Necessita de ajustes em alguns componentes
 - [ ] Dashboard - 10% - Estou aprendo a usar Charts
 - [ ] Adicionar Entrada
 - [ ] Ajustes de cores e bordas
+- [ ] Otimização de build - (Ajustar itens como img para Image e a para Link, usando biblioteca nativa nextjs)
 
 ## Completed Tasks
 - [x] Login 
@@ -39,6 +40,6 @@ Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devid
 - [x] Minhas Bancas
 - [x] Adicionar Banca
 - [x] Editar Banca
-- [x] Status das Apostas - 90% - Falta implementar calendário e filtro.
+- [x] Status das Apostas
 
 
