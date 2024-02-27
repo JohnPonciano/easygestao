@@ -27,7 +27,6 @@ Para instalar corretamente
 Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devido ao foco em aprender a criar os componentes, não desenvolvi o metodo de auth para redirecionar a dashboard diretamente. 
 
 # To-Do
-- [ ] Ajustar Fluxo de navegação Login e Registro -> Dashboard
 - [ ] Responsivade - 30% - Necessita de ajustes em alguns componentes
 - [ ] Dashboard - 10% - Estou aprendo a usar Charts
 - [ ] Adicionar Entrada
@@ -42,5 +41,6 @@ Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devid
 - [x] Adicionar Banca
 - [x] Editar Banca
 - [x] Status das Apostas
+- [x] Ajustar Fluxo de navegação Login e Registro -> Dashboard
 
 
