@@ -28,8 +28,8 @@ export const ShowBanca = () => {
   };
 
   return (
-    <div className="flex mt-20 flex-col items-start justify-start w-full max-w-screen-xl mx-auto">
-      <div className="flex items-center justify-start p-4 bg-gray-700" style={{ width: '100%' }}>
+    <div className="flex flex-col items-start justify-start w-full max-w-screen-xl mx-auto">
+      <div className="flex items-center justify-start p-4 bg-gray-700 w-full">
         <button onClick={handleArrowLeftClick}>
           <ArrowLeft className="text-white mr-4" />
         </button>

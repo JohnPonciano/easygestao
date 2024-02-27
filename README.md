@@ -27,7 +27,7 @@ Para instalar corretamente
 Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devido ao foco em aprender a criar os componentes, não desenvolvi o metodo de auth para redirecionar a dashboard diretamente. 
 
 # To-Do
-- [ ] Responsivade - 30% - Necessita de ajustes em alguns componentes
+- [ ] Responsivade - 40% - Necessita de ajustes em alguns componentes
 - [ ] Dashboard - 10% - Estou aprendo a usar Charts
 - [ ] Adicionar Entrada
 - [ ] Ajustes de cores e bordas
