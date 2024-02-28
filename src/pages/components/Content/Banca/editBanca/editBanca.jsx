@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+// Importação de dependências
+import React, { useState, useEffect } from 'react';
 import { DollarSign } from 'lucide-react';
 
-
-export const EditBankrollForm = ({onBackToCards}) => {
-
+// Definição do componente EditBankrollForm
+const EditBankrollForm = ({ data, onBackToCards }) => {
+  // Estado local para armazenar os dados do formulário
   const [formData, setFormData] = useState({
-    bankrollName: '',
-    managementType: '',
-    currency: 'BRL',
-    initialBankroll: '',
-    stakePercentage: '',
-    unit: '',
+    bankrollName: '',           // Nome do Bankroll
+    managementType: '',         // Tipo de Gestão
+    currency: 'BRL',            // Escolha a moeda (padrão: BRL)
+    initialBankroll: '',        // Banca Inicial
+    stakePercentage: '',        // Stake %
+    unit: '',                   // Unidade
   });
 
+  // Efeito useEffect para atualizar o estado com os dados recebidos
+  useEffect(() => {
+    setFormData({
+      bankrollName: data.nome || '',                // Nome do Bankroll (ou vazio)
+      managementType: data.managementType || '',    // Tipo de Gestão (ou vazio)
+      currency: data.currency || 'BRL',             // Escolha a moeda (ou BRL se vazio)
+      initialBankroll: data.initialBankroll || '',  // Banca Inicial (ou vazio)
+      stakePercentage: data.stake || '',            // Stake % (ou vazio)
+      unit: data.unidade || '',                     // Unidade (ou vazio)
+    });
+  }, [data]);
+
+  // Manipulador de eventos para atualizar o estado ao digitar
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -21,22 +35,26 @@ export const EditBankrollForm = ({onBackToCards}) => {
     }));
   };
 
+  // Manipulador de eventos para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    onBackToCards();
+    console.log(formData);        // Aqui você pode fazer algo com os dados atualizados
+    onBackToCards();              // Volta para a exibição de cards
   };
 
+  // Renderização do componente
   return (
-    
-    <div className="container mx-auto mt-1 p-8 bg-gray-700 rounded-lg">
-      <div className="flex items-center justify-start mb-8  w-full ">
+    // Container principal do formulário
+    <div className="container mx-auto -mt-10 p-2 md:p-8 bg-gray-700 rounded-lg">
+      {/* Cabeçalho com ícone e título */}
+      <div className="flex items-center justify-start mb-4 w-full">
         <DollarSign className="mr-2 text-white" size={35} />
-        <h3 className=" font-semibold text-white ml-2 text-4xl ">Editar Banca</h3>
+        <h3 className="font-semibold text-white ml-2 text-2xl md:text-4xl">Editar Banca</h3>
       </div>
-      <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
-        {/* Coluna 1 */}
-        <div className="mb-4 col-span-1">
+
+      {/* Formulário com layout responsivo em duas colunas para telas maiores */}
+      <form onSubmit={handleSubmit} className="flex flex-col md:grid md:grid-cols-2 gap-4">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="bankrollName">
             Nome do Bankroll
           </label>
@@ -46,11 +64,11 @@ export const EditBankrollForm = ({onBackToCards}) => {
             name="bankrollName"
             value={formData.bankrollName}
             onChange={handleChange}
-            className="w-full p-2  text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
+            className="w-full p-2 text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="managementType">
             Tipo de Gestão
           </label>
@@ -64,7 +82,7 @@ export const EditBankrollForm = ({onBackToCards}) => {
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="currency">
             Escolha a moeda
           </label>
@@ -80,8 +98,7 @@ export const EditBankrollForm = ({onBackToCards}) => {
           </select>
         </div>
 
-        {/* Coluna 2 */}
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="initialBankroll">
             Banca Inicial
           </label>
@@ -96,7 +113,7 @@ export const EditBankrollForm = ({onBackToCards}) => {
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="stakePercentage">
             Stake %
           </label>
@@ -107,11 +124,11 @@ export const EditBankrollForm = ({onBackToCards}) => {
             name="stakePercentage"
             value={formData.stakePercentage}
             onChange={handleChange}
-            className="w-full p-2  text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
+            className="w-full p-2 text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="unit">
             Unidade
           </label>
@@ -121,7 +138,7 @@ export const EditBankrollForm = ({onBackToCards}) => {
             name="unit"
             value={formData.unit}
             onChange={handleChange}
-            className="w-full p-2  text-white bg-gray-900 border border-indigo-700 border-opacity-10 rounded"
+            className="w-full p-2 text-white bg-gray-900 border border-indigo-700 border-opacity-10 rounded"
           />
         </div>
 
@@ -137,3 +154,6 @@ export const EditBankrollForm = ({onBackToCards}) => {
     </div>
   );
 };
+
+// Exportação do componente para uso em outros lugares
+export default EditBankrollForm;

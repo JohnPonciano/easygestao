@@ -5,7 +5,9 @@ import { ShowBanca } from '../components/Content/Banca/Banca';
 import { Home } from '../components/Content/Home/index';
 import { Charts } from '../components/Content/Charts/Charts';
 import { ListaBet } from '../components/Content/Lista';
+import UserProfile from '../components/Content/Profile/profile'
 import BottonBar from '../components/BottonBar/bottonbar';
+import { AddEntradas } from '../components/Content/AddEntradas/AddEntradas';
 
 const Dashboard = () => {
   const [activeOption, setActiveOption] = useState('home');
@@ -25,7 +27,9 @@ const Dashboard = () => {
       case 'myBoards':
         return <ShowBanca />;
       case 'profile':
-        return <h1>Profile</h1>;
+        return <UserProfile />;
+      case 'addentrada':
+        return <AddEntradas/>
       default:
         return null;
     }

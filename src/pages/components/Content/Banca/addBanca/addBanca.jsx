@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { DollarSign } from 'lucide-react';
 
-
-export const AddBankrollForm = ({onBackToCards}) => {
-
+export const AddBankrollForm = ({ onBackToCards }) => {
   const [formData, setFormData] = useState({
     bankrollName: '',
     managementType: '',
@@ -28,15 +26,13 @@ export const AddBankrollForm = ({onBackToCards}) => {
   };
 
   return (
-    
-    <div className="container mx-auto mt-1 p-8 bg-gray-700 rounded-lg">
-      <div className="flex items-center justify-start mb-8  w-full ">
+    <div style={{ maxHeight: "500px", overflowY: "auto", scrollbarWidth: "thin", msOverflowStyle: "none" }} className="container mx-auto mt-1 p-4 md:p-8 bg-gray-700 rounded-lg">
+      <div className="flex items-center justify-start mb-4 w-full">
         <DollarSign className="mr-2 text-white" size={35} />
-        <h3 className=" font-semibold text-white ml-2 text-4xl ">Adicionar Banca</h3>
+        <h3 className="font-semibold text-white ml-2 text-2xl md:text-4xl">Adicionar Banca</h3>
       </div>
-      <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
-        {/* Coluna 1 */}
-        <div className="mb-4 col-span-1">
+      <form onSubmit={handleSubmit} className="flex flex-col md:grid md:grid-cols-2 gap-4">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="bankrollName">
             Nome do Bankroll
           </label>
@@ -46,11 +42,11 @@ export const AddBankrollForm = ({onBackToCards}) => {
             name="bankrollName"
             value={formData.bankrollName}
             onChange={handleChange}
-            className="w-full p-2  text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
+            className="w-full p-2 text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="managementType">
             Tipo de Gestão
           </label>
@@ -64,7 +60,7 @@ export const AddBankrollForm = ({onBackToCards}) => {
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="currency">
             Escolha a moeda
           </label>
@@ -80,8 +76,7 @@ export const AddBankrollForm = ({onBackToCards}) => {
           </select>
         </div>
 
-        {/* Coluna 2 */}
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="initialBankroll">
             Banca Inicial
           </label>
@@ -96,7 +91,7 @@ export const AddBankrollForm = ({onBackToCards}) => {
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="stakePercentage">
             Stake %
           </label>
@@ -107,11 +102,11 @@ export const AddBankrollForm = ({onBackToCards}) => {
             name="stakePercentage"
             value={formData.stakePercentage}
             onChange={handleChange}
-            className="w-full p-2  text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
+            className="w-full p-2 text-white bg-gray-900 border rounded border-indigo-700 border-opacity-10"
           />
         </div>
 
-        <div className="mb-4 col-span-1">
+        <div className="mb-4">
           <label className="block text-sm font-bold mb-2 text-white" htmlFor="unit">
             Unidade
           </label>
@@ -121,7 +116,7 @@ export const AddBankrollForm = ({onBackToCards}) => {
             name="unit"
             value={formData.unit}
             onChange={handleChange}
-            className="w-full p-2  text-white bg-gray-900 border border-indigo-700 border-opacity-10 rounded"
+            className="w-full p-2 text-white bg-gray-900 border border-indigo-700 border-opacity-10 rounded"
           />
         </div>
 

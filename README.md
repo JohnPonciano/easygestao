@@ -32,7 +32,7 @@ Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devid
 - [ ] Adicionar Entrada
 - [ ] Ajustes de cores e bordas
 - [ ] Otimização de build - (Ajustar itens como img para Image e a para Link, usando biblioteca nativa nextjs)
-
+- [ ]Bug fix no botão APPLY dos filtros
 ## Completed Tasks
 - [x] Login 
 - [x] Cadastro

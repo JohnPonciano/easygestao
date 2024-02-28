@@ -3,7 +3,7 @@ import React from 'react';
 export const Home = ({onOptionChange}) => {
 
     const handleHomeButtonClick = () => {
-        onOptionChange('myBoards');
+        onOptionChange('addentrada');
       };
 
   return (
