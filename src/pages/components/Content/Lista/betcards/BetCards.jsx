@@ -107,7 +107,9 @@ const CalendarModal = ({ isOpen, onClose, onSelectDate }) => {
 
 const SportEventCard = () => {
   return (
-    <article className="flex flex-col grow py-5 px-5 pr-4 pl-4 mx-auto w-full rounded-2xl border border-solid bg-slate-800 border-gray-700 mt-6 md:max-w-full">
+    <article className="flex flex-col grow py-5 px-5 pr-4 pl-4 mx-auto 
+    w-full rounded-2xl border border-solid bg-slate-800 border-gray-700 
+    mt-6 md:max-w-full">
   <header className="flex gap-2.5 justify-between">
     <img loading="lazy" src="/betlogo.png" className="aspect-[0.92] w-[45px]" alt="Bet 365 Logo" />
     <div className="flex gap-5 self-start">
@@ -142,7 +144,8 @@ const SportEventCard = () => {
   </div>
   <div className="flex gap-5 justify-between pr-9 mt-2 leading-6 max-md:pr-5">
     <BetDetails date="24 Jan 2023 - 18:30" type="Entrada"/>
-    <div className="justify-center self-start px-2 text-xs font-medium text-lime-900 bg-orange-200 aspect-[3.2] rounded-[58px]">Pendente</div>
+    <div className="justify-center self-start px-2 text-xs font-medium
+     text-lime-900 bg-orange-200 aspect-[3.2] rounded-[58px]">Pendente</div>
   </div>
 </article>
 

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
-import {AddSimples} from '../addSimples/addSimples'
+import AddSimples from '../addSimples/addSimples'
 
 
 // Reusable component for the content blocks
 const ContentBlock = ({ imageUrl, altText, title, onClick }) => (
-  <div className="flex flex-col grow items-start pt-3 pr-20 pb-9 pl-4 w-full text-xl font-medium leading-6 whitespace-nowrap rounded-lg border border-solid bg-slate-800 text-zinc-50 max-md:pr-5 max-md:mt-6 max-md:max-w-full" onClick={onClick}>
+  <div className="flex flex-col grow items-start pt-3 pr-20 pb-9 pl-4 
+  w-full text-xl font-medium leading-6 whitespace-nowrap rounded-lg 
+  border border-solid bg-slate-800 text-zinc-50 max-md:pr-5
+   max-md:mt-6 max-md:max-w-full "   onClick={onClick}>
     <img loading="lazy" src={imageUrl} alt={altText} className="aspect-square w-12" />
     <div className="mt-2">{title}</div>
   </div>
@@ -57,18 +60,21 @@ function MenuGrid({ onComponentClick }) {
 
   return (
     <main className="flex flex-col w-full">
-      <section className="mt-12 w-full max-md:mt-10 max-md:max-w-full">
+      <section className="mt-12 w-full max-md:mt-10 max-md:max-w-full "
+      style={{ maxHeight: "600px", overflowY: "auto", scrollbarWidth: "thin", msOverflowStyle: "none" }} >
+      
         {selectedComponent ? (
           // Render the selected component
           <div>
             <button onClick={() => setSelectedComponent(null)}>
-              <ArrowLeft className="text-green-400 hover:text-green-700 mr-4  " size={48} />
+              <ArrowLeft className="text-green-400 hover:text-green-700 mr-4" size={48} />
             </button>
             {selectedComponent}
           </div>
         ) : (
           // Render the menu if no component is selected
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2
+           md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
             {blocksData.map((block) => (
               <ContentBlock
                 key={block.id}

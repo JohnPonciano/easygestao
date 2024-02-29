@@ -42,5 +42,7 @@ Na pagina Home, eu adicioneis 3 botões para facilitar a navegação, pois devid
 - [x] Editar Banca
 - [x] Status das Apostas
 - [x] Ajustar Fluxo de navegação Login e Registro -> Dashboard
+- [x] Profile page
+
 
 
