@@ -64,7 +64,8 @@ const AddSimples = () => {
   const situationOptions = ["Option 1", "Option 2", "Option 3"];
 
   return (
-    <main className="flex flex-col text-base p-2 -mt-15 md:justify-center md:items-center">
+    <main className="flex flex-col text-base p-2 -mt-15  md:justify-center md:items-center">
+      <h3 className="font-semibold text-white ml-2 mb-5 text-4xl">Adicionar Aposta</h3>
       <section className="grid gap-5 grid-cols-1 md:grid-cols-2 md:w-full"
       >
         <InputSection title="Escolha o bankroll" options={bankrollOptions} />

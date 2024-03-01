@@ -20,7 +20,7 @@ export const AddEntradas = () => {
       <div className="flex items-center justify-start p-4 bg-gray-700 w-full md:mt-20">
         {selectedComponent !== null && (
           <button onClick={handleBackToMenu}>
-            <ArrowLeft className="text-white mr-4" />
+            <ArrowLeft className="text-white mr-4 " />
           </button>
         )}
         <UserCog className="mr-2 text-white" size={35} />

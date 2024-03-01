@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import AddSimples from '../addSimples/addSimples'
+import AddMultiplas from '../addMultiplas/addMultiplas'
 
 
 // Reusable component for the content blocks
@@ -36,7 +37,7 @@ function MenuGrid({ onComponentClick }) {
         setSelectedComponent(<AddSimples/>);
         break;
       case 2:
-        setSelectedComponent(<h1>Multiplas Component</h1>);
+        setSelectedComponent(<AddMultiplas/>);
         break;
       case 3:
         setSelectedComponent(<h1>Back Component</h1>);
@@ -67,7 +68,7 @@ function MenuGrid({ onComponentClick }) {
           // Render the selected component
           <div>
             <button onClick={() => setSelectedComponent(null)}>
-              <ArrowLeft className="text-green-400 hover:text-green-700 mr-4" size={48} />
+              <ArrowLeft className="text-green-400 fixed -mt-10 hover:text-green-700 mr-4" size={48} />
             </button>
             {selectedComponent}
           </div>
